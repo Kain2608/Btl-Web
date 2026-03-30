@@ -1,8 +1,28 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg"
 import { FaHeadset, FaMapMarkerAlt, FaSearch, FaBinoculars, FaUser, FaShoppingCart, FaSignInAlt, FaUserPlus} from 'react-icons/fa';
+import CartDropdown from './CartDropdown';
 
 export default function Header() {
+  // 3. Dữ liệu giả lập cho giỏ hàng CÓ sản phẩm
+  const cartItems = [
+    {
+      id: 1,
+      name: 'Vợt Cầu Lông VNB V200i Hồng Chính Hãng',
+      quantity: 1,
+      price: '529.000 đ', // Giá dạng chữ để hiển thị
+      priceNum: 529000,   // Giá dạng số để tính toán
+      image: 'https://cdn.shopvnb.com/img/300x300/uploads/gallery/vot-cau-long-vnb-v200i-hong-chinh-hang-1_1711411281.webp'
+    },
+    {
+      id: 2,
+      name: 'Quấn cán vợt Cầu Lông VS002',
+      quantity: 2,
+      price: '15.000 đ',
+      priceNum: 15000,
+      image: 'https://cdn.shopvnb.com/img/300x300/uploads/gallery/quan-can-vot-vs-002.webp'
+    },
+  ];
   return (
     // Toàn bộ thanh Header: nền trắng, viền dưới mờ, độ cao đệm trên/dưới
     <header className="w-full bg-white py-3 px-15">
@@ -29,7 +49,10 @@ export default function Header() {
           <div className="flex items-center gap-2">
             <FaMapMarkerAlt className="text-orange-500 text-xl" />
             <div className="text-xs">
-              <span className="text-gray-700 font-semibold tracking-wide hover:text-orange-600 hover:cursor-pointer">HỆ THỐNG CỬA HÀNG</span>
+              <Link
+                to='dia-chi'
+                className="text-gray-700 font-semibold tracking-wide hover:text-orange-600 hover:cursor-pointer">HỆ THỐNG CỬA HÀNG
+              </Link>
             </div>
           </div>
 
@@ -110,16 +133,22 @@ export default function Header() {
             </div>
 
             {/* Nút: Giỏ hàng (Có huy hiệu số lượng) */}
-            <div className="flex flex-col items-center gap-1.5 cursor-pointer group">
-              {/* Relative để định vị huy hiệu (badge) */}
-              <div className="relative w-11 h-11 flex items-center justify-center border border-orange-500 rounded-full text-orange-500 text-2xl group-hover:bg-orange-50 transition-colors">
+            <div className="relative flex flex-col items-center gap-1.5 cursor-pointer group">
+          
+              {/* Icon Giỏ hàng (Có viền màu cam chuẩn VNB Premium) */}
+              <div className="w-11 h-11 flex items-center justify-center border border-orange-500 rounded-full text-orange-500 text-xl group-hover:bg-orange-50 transition-colors relative">
                 <FaShoppingCart />
-                {/* Huy hiệu số lượng màu đỏ */}
-                <span className="absolute -top-1.5 -right-1.5 flex items-center justify-center w-5 h-5 bg-red-600 text-white text-[11px] font-extrabold rounded-full border-2 border-white">
+                {/* Badge số lượng sản phẩm */}
+                <span className="absolute -top-1.5 -right-1.5 bg-[#d82a29] text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
                   0
                 </span>
               </div>
-              <span className="text-[11px] text-gray-800 font-semibold uppercase tracking-tight">GIỎ HÀNG</span>
+              
+              <span className="text-[11px] text-gray-800 font-semibold uppercase tracking-tight">Giỏ hàng</span>
+
+              {/* 4. GỌI COMPONENT DROPDOWN VÀ TRUYỀN DỮ LIỆU VÀO */}
+              <CartDropdown cartItems={cartItems} />
+              
             </div>
           </div>
         </div>

@@ -29,9 +29,11 @@ const Footer = () => {
               <p className="text-[13px] mb-2">
                 Hệ thống cửa hàng: <span className="text-[#ea5c0b] font-bold">1 Super Center, 5 shop Premium và 78 cửa hàng</span> trên toàn quốc
               </p>
-              <a href="#" className="text-[#ea5c0b] font-bold text-[13px] block mb-4 hover:underline">
+              <Link
+                to='dia-chi'
+                className="text-[#ea5c0b] font-bold text-[13px] block mb-4 hover:underline">
                 Xem tất cả các cửa hàng VNB
-              </a>
+              </Link>
               <p className="text-[13px] mb-2">
                 <span className="font-bold text-white">Hotline:</span> <span className="text-[#ea5c0b]">0977508430 | 0338000308</span>
               </p>
@@ -69,15 +71,39 @@ const Footer = () => {
             <div>
               <h3 className="text-white font-bold text-[15px] uppercase mb-5">Chính Sách</h3>
               <ul className="space-y-3 text-[13px]">
-                <li className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Thông tin về vận chuyển và giao nhận</a></li>
-                <li className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Chính sách đổi trả, hoàn tiền</a></li>
-                <li className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Chính sách bảo hành</a></li>
+                <Link
+                  to ='/huong-dan/thanh-toan'
+                  className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Thông tin về vận chuyển và giao nhận</a>
+                </Link>
+                <Link
+                  to = '/huong-dan/thanh-toan'
+                  className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Chính sách đổi trả, hoàn tiền</a>
+                </Link>
+                <Link
+                  to = '/huong-dan/thanh-toan'                
+                  className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Chính sách bảo hành</a>
+                </Link>
                 {/* Mục này trong ảnh gốc có màu cam mặc định */}
-                <li className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Chính sách xử lý khiếu nại</a></li>
-                <li className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Chính sách vận chuyển</a></li>
-                <li className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Điều khoản sử dụng</a></li>
-                <li className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Chính Sách Bảo Mật Thông Tin</a></li>
-                <li className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Chính sách nhượng quyền</a></li>
+                <Link
+                  to= '/huong-dan/thanh-toan'
+                  className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Chính sách xử lý khiếu nại</a>
+                </Link>
+                <Link
+                  to = '/huong-dan/thanh-toan'
+                  className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Chính sách vận chuyển</a>
+                </Link>
+                <Link
+                  to='/huong-dan/thanh-toan'
+                  className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Điều khoản sử dụng</a>
+                </Link>
+                <Link
+                  to='/huong-dan/thanh-toan'
+                  className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Chính Sách Bảo Mật Thông Tin</a>
+                </Link>
+                <Link
+                  to='/nhuong-quyen'
+                  className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Chính sách nhượng quyền</a>
+                </Link>
               </ul>
             </div>
 
@@ -85,11 +111,10 @@ const Footer = () => {
             <div>
               <h3 className="text-white font-bold text-[15px] uppercase mb-5">Hướng Dẫn</h3>
               <ul className="space-y-3 text-[13px]">
-                <li className="flex items-start"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2 mt-1.5"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Cách chọn vợt Pickleball dành cho người mới bắt đầu chơi</a></li>
                 <li>
                   <Link 
                     to="/huong-dan/mua-hang" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#ea5c0b]"
+                    className="hover:text-[#ea5c0b] transition-colors"
                   >
                   Hướng dẫn mua hàng
                   </Link>
@@ -97,17 +122,31 @@ const Footer = () => {
                 <li>
                   <Link 
                     to="/huong-dan/chon-vot" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#ea5c0b]"
+                    className="hover:text-[#ea5c0b] transition-colors"
                   >
                     Hướng dẫn cách chọn vợt cầu lông cho người chơi mới
                   </Link>
                 </li>
-                <li className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Kiểm tra bảo hành</a></li>
-                <li className="flex items-center"><span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span> <a href="#" className="hover:text-[#ea5c0b] transition-colors">Kiểm tra đơn hàng</a></li>
+                <li>
+                  <Link 
+                    to="/kiem-tra-bao-hanh" 
+                    className="hover:text-[#ea5c0b] transition-colors"
+                  >
+                    Kiểm tra bảo hành
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/kiem-tra-don-hang" 
+                    className="hover:text-[#ea5c0b] transition-colors"
+                  >
+                    Kiểm tra đơn hàng
+                  </Link>
+                </li>
                 <li>
                     <Link 
                       to="/huong-dan/mua-hang" 
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#ea5c0b]"
+                      className="hover:text-[#ea5c0b] transition-colors"
                     >
                     Hướng dẫn mua hàng
                     </Link>

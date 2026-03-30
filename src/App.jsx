@@ -16,6 +16,7 @@ import Register from './pages/Account/Register';
 import Login from './pages/Account/Login';
 import ForgotPassWord from './pages/Account/ForgotPassWord';
 import ProductsPage from './pages/ProductsPage';
+import Address from './pages/Address'
 
 
 // 1. Import trang chi tiết (chúng ta sẽ tạo ở Bước 4)
@@ -44,6 +45,7 @@ function App() {
         <Route path="dang-nhap" element={<Login />} />
         <Route path="quen-mat-khau" element={<ForgotPassWord />} />
         <Route path="/san-pham/:slug" element={<ProductsPage />} />
+        <Route path="/dia-chi" element={<Address />} />
         
         <Route path="*" element={<div className="py-20 text-center text-2xl font-bold">404 - Không tìm thấy trang</div>} />
       </Routes>
