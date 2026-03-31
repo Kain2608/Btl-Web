@@ -36,7 +36,7 @@ const OrderTrackingPage = () => {
             
             <button 
               type="submit" 
-              className="bg-[#ea5c0b] hover:bg-[#d9530a] text-white font-medium py-2.5 px-8 rounded transition-colors text-[14px] uppercase shadow-sm"
+              className="w-full bg-[#d84b24] hover:bg-white hover:text-[#d84b24] text-white font-medium py-3 rounded border transition-colors text-[14px] uppercase mt-2 shadow-sm hover:cursor-pointer"
             >
               Tra cứu thông tin bảo hành
             </button>

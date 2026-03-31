@@ -50,7 +50,7 @@ const ForgotPasswordPage = () => {
             type="submit" 
             // Đổi màu mờ đi nếu chưa nhập đúng Captcha
             className={`w-full font-medium py-3 rounded transition-colors text-[14px] uppercase shadow-sm tracking-wide ${
-              isCaptchaValid ? 'bg-[#d84b24] hover:bg-[#b93d1b] text-white' : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+              isCaptchaValid ? 'className="w-full bg-[#d84b24] hover:bg-white hover:text-[#d84b24] text-white font-medium py-3 rounded border transition-colors text-[14px] uppercase mt-2 shadow-sm hover:cursor-pointer"' : 'bg-gray-300 text-gray-500 cursor-not-allowed'
             }`}
           >
             Gửi yêu cầu

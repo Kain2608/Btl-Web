@@ -47,7 +47,7 @@ const FloatingButtons = () => {
 
         {/* Nút Hệ thống cửa hàng (Sát lề phải) */}
         <Link 
-          to="/he-thong-cua-hang" 
+          to="/dia-chi" 
           className="flex items-center bg-[#3b82f6] text-white pl-5 pr-3 py-2.5 rounded-l-full shadow-lg hover:bg-blue-600 transition-colors"
         >
           {/* Icon Bản đồ / Location */}

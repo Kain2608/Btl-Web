@@ -55,7 +55,7 @@ const RegisterPage = () => {
           />
           <button 
             type="submit" 
-            className="w-full bg-[#d84b24] hover:bg-[#b93d1b] text-white font-medium py-3 rounded transition-colors text-[14px] uppercase mt-2 shadow-sm"
+            className="w-full bg-[#d84b24] hover:bg-white hover:text-[#d84b24] text-white font-medium py-3 rounded border transition-colors text-[14px] uppercase mt-2 shadow-sm hover:cursor-pointer"
           >
             Đăng ký
           </button>

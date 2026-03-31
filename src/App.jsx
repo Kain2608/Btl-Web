@@ -16,7 +16,8 @@ import Register from './pages/Account/Register';
 import Login from './pages/Account/Login';
 import ForgotPassWord from './pages/Account/ForgotPassWord';
 import ProductsPage from './pages/ProductsPage';
-import Address from './pages/Address'
+import Address from './pages/Address';
+import Scroll from './components/ScrollToTop';
 
 
 // 1. Import trang chi tiết (chúng ta sẽ tạo ở Bước 4)
@@ -25,7 +26,10 @@ import NewsDetailPage from './pages/NewsDetailPage';
 function App() {
   return (
     <MainLayout>
+      <Scroll />
       <Routes>
+
+        <Route path="/" element={<HomePage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/tin-tuc" element={<NewsPage />} />
         
